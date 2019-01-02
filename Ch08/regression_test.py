@@ -29,4 +29,4 @@ fig=plt.figure()
 ax=fig.add_subplot(111)
 ax.plot(xSort[:,1],yHat[strInd])
 ax.scatter(xMat[:,1].flatten().A[0],mat(yArr).T.flatten().A[0],s=2,c='red')
-plt.show()
+plt.show() #test
