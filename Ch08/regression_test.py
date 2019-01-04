@@ -19,6 +19,7 @@ ax.plot(xCopy[:,1],yHat)
 plt.show()
 '''
 
+'''
 #yHat=regression.lwlrTest(xArr,xArr,yArr,1)
 #yHat=regression.lwlrTest(xArr,xArr,yArr,0.01)
 yHat=regression.lwlrTest(xArr,xArr,yArr,0.003)
@@ -29,4 +30,12 @@ fig=plt.figure()
 ax=fig.add_subplot(111)
 ax.plot(xSort[:,1],yHat[strInd])
 ax.scatter(xMat[:,1].flatten().A[0],mat(yArr).T.flatten().A[0],s=2,c='red')
+plt.show() #test
+'''
+
+abX,abY=regression.loadDataSet('abalone.txt')
+ridgeWeights=regression.ridgeTest(abX,abY)
+fig=plt.figure()
+ax=fig.add_subplot(111)
+ax.plot(ridgeWeights)
 plt.show() #test
